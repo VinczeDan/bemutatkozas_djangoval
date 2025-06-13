@@ -1,0 +1,73 @@
+.kapcsolat {
+  max-width: 1000px; /* Wider container for 2 columns */
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--masik-feher);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.kapcsolat h2 {
+  text-align: center;
+  color: var(--color-text-dark);
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+/* Flexbox container for columns */
+.contact-container {
+  display: flex;
+  gap: 40px; /* Space between columns */
+}
+
+.contact-info {
+  flex: 1; /* Takes 1 part of space */
+  padding: 20px;
+  background: var(--color-white);
+  border-radius: 8px;
+  box-shadow: var(--shadow-text-strong);
+}
+
+.contact-form {
+  flex: 1; /* Takes 1 part of space */
+  padding: 20px;
+  background: var(--color-white);
+  border-radius: 8px;
+  box-shadow: var(--shadow-text-strong);
+}
+
+/* Rest of your existing styles... */
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.contact-item i {
+  margin-right: 15px;
+  color: var(--color-primary);
+  font-size: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%; /* Full width inside form */
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid var(--color-text-lighter);
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}

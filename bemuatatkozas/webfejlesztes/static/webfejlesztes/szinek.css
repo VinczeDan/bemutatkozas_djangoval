@@ -1,0 +1,23 @@
+:root {
+    /* Primary Colors */
+    --color-primary: #f3821a;        /* Orange from hover underline */
+    --color-white: whitesmoke ;         /* Background, header */
+    --color-black: #000000;         /* Hover text, selection bg */
+    --masik-feher: #f9f9f9;
+    /* Text Colors */
+    --color-text-dark: #333333;     /* Heading */
+    --color-text-medium: #555555;   /* Default nav text */
+    --color-text-light: #aaaaaa;    /*· Separator dots */
+    
+    /* Shadows */
+    --shadow-text: 1px 1px 3px rgba(0, 0, 0, 0.5);       /* Motto text shadow */
+    --shadow-text-strong: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Title text shadow */
+    --shadow-box: 0 2px 10px rgba(0, 0, 0, 0.1);         /* Header box shadow */
+    --shadow-box-strong: -5px 0 15px rgba(0, 0, 0, 0.1);  /* Mobile menu shadow */
+  }
+  
+  /* Selection styles */
+  ::selection {
+    background-color: var(--color-black);
+    color: whitesmoke;
+  }
