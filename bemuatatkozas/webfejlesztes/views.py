@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .models import Csempe
 
 def fooldal(request):
-    return render(request, "index.html")
+    csempék = Csempe.objects.all()
+    return render(request, 'webfejlesztes/index.html', {'csempék': csempék})
