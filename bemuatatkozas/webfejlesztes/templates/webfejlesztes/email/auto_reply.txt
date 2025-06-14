@@ -1,0 +1,7 @@
+Kedves {{ name }}!
+
+Köszönjük, hogy felvette velünk a kapcsolatot!
+Megkaptuk üzenetedet és hamarosan válaszolunk.
+
+Üdvözlettel,
+A WebFizz csapata 
