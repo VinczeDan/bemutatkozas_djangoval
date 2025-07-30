@@ -17,7 +17,9 @@ header {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 100; /* Ensures header stays above other content */
 }
 
 h1 {
@@ -98,6 +100,27 @@ li a :not(:last-child)::before {
 .logo-es-motto:hover{
   cursor: pointer;
 }
+
+.language-switcher {
+  margin-left: 20px;
+}
+
+#lang-btn {
+  background: none;
+  border: 2px solid #f3821a;
+  color: #f3821a;
+  padding: 5px 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 5px;
+}
+
+#lang-btn:hover {
+  background-color: #f3821a;
+  color: white;
+}
+
 
 /* Mobile styles */
 @media (max-width: 878px) {

@@ -1,13 +1,16 @@
 /* Általános stílusok a munkáim szekcióhoz */
 .munkaim {
   padding: 4rem 2rem;
-  padding-top:0;
+  padding-top: 0;
   font-family: "Arial", sans-serif;
 }
 
 .munkaim-tartalom {
   max-width: 1200px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
 
 .munkaim-felirat {
@@ -19,9 +22,8 @@
   text-transform: uppercase;
   letter-spacing: 3px;
   position: relative;
+  grid-column: 1 / -1; /* Makes the title span all columns */
 }
-
-
 
 /* Munka csempe stílusok */
 .munka-csempe {
@@ -30,8 +32,8 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 350px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .munka-csempe:hover {
@@ -58,17 +60,41 @@
   line-height: 1.6;
   padding: 0 1.5rem 1.5rem;
   margin-top: 0;
+  flex-grow: 1; /* Makes descriptions equal height */
 }
 
 /* Reszponzív stílusok */
-@media (min-width: 768px) {
+@media (max-width: 992px) {
   .munkaim-tartalom {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
+@media (max-width: 768px) {
+  .munkaim {
+    padding: 2rem 1rem;
+  }
+  
+  .munkaim-tartalom {
+    grid-template-columns: 1fr;
+  }
+  
   .munkaim-felirat {
-    grid-column: 1 / -1;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  .munka-cim {
+    font-size: 1.3rem;
+  }
+  
+  .leiras {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .munkaim-felirat {
+    font-size: 1.5rem;
   }
 }

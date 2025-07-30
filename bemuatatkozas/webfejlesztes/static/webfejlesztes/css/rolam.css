@@ -34,15 +34,6 @@
   padding-left: 15px;
 }
 
-.nevem::after {
-  content: "";
-  position: absolute;
-  bottom: 95px;
-  left: 15px;
-  width: 60px;
-  height: 3px;
-  background: linear-gradient(to right, var(--color-primary), #f9a742);
-}
 
 .kepem {
   grid-column: 1;
@@ -72,21 +63,47 @@
   display: flex;
   align-items: center;
 }
+/* Existing styles remain the same until media queries */
 
-/* Reszponzív design */
 @media (max-width: 768px) {
   .rolam {
+    padding: 20px;
+    margin: 20px auto;
     grid-template-columns: 1fr;
+    gap: 20px;
   }
-
-  .nevem,
-  .kepem,
-  .rolam p {
-    grid-column: auto;
+  
+  .nevem {
+    font-size: 1.8rem;
+    padding-left: 10px;
   }
-
+  
+  .nevem::after {
+    bottom: 75px;
+    width: 50px;
+  }
+  
+  .kepem {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  
   .rolam p {
-    grid-row: auto;
-    margin-top: 20px;
+    padding: 15px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .rolam {
+    padding: 15px;
+  }
+  
+  .nevem {
+    font-size: 1.5rem;
+  }
+  
+  .kepem {
+    max-width: 150px;
   }
 }

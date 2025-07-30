@@ -2,7 +2,7 @@
   max-width: 1000px; /* Wider container for 2 columns */
   margin: 0 auto;
   padding: 40px 20px;
-  font-family: 'Arial', sans-serif;
+  font-family: "Oswald";
   background-color: var(--masik-feher);
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -70,4 +70,48 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+}
+
+/* Existing styles remain the same until media queries */
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contact-info,
+  .contact-form {
+    padding: 15px;
+  }
+  
+  .kapcsolat h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .kapcsolat {
+    padding: 20px 15px;
+  }
+  
+  .kapcsolat h2 {
+    font-size: 1.5rem;
+  }
+  
+  .contact-item {
+    font-size: 14px;
+  }
+  
+  .contact-item i {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    font-size: 14px;
+  }
 }
