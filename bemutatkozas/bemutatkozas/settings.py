@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-zmne9xfdnw-w0b11tv3@!3_4+w!vsdd@*gd51_o@&zdhbg0^x-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['139.59.208.20', 'webfizz.hu', 'www.webfizz.hu', 'localhost']
+ALLOWED_HOSTS = ['139.59.208.20']
 
 
 # Application definition
@@ -38,7 +38,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'bemuatatkozas.urls'
+ROOT_URLCONF = 'bemutatkozas.urls'
 
 TEMPLATES = [
     {
@@ -55,7 +55,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'bemuatatkozas.wsgi.application'
+WSGI_APPLICATION = 'bemutatkozas.wsgi.application'
 
 
 # Database
@@ -95,7 +95,7 @@ LANGUAGE_CODE = 'en-us'
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    os.path.join(BASE_DIR, 'webfejlesztes', 'static'),
 ]
 
 
