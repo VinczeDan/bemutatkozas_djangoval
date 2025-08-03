@@ -1,19 +1,16 @@
 from pathlib import Path
 import os
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+import local_settings
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-zmne9xfdnw-w0b11tv3@!3_4+w!vsdd@*gd51_o@&zdhbg0^x-'
+SECRET_KEY = local_settings.SECRET_KEY
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True if local_settings.HOL_VAGYOK == 'otthon' else False
 
-ALLOWED_HOSTS = ['139.59.208.20']
+ALLOWED_HOSTS = ['139.59.208.20', 'webfizz.hu', 'www.webfizz.hu', 'localhost']
 
 
 # Application definition
@@ -58,19 +55,29 @@ TEMPLATES = [
 WSGI_APPLICATION = 'bemutatkozas.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if local_settings.HOL_VAGYOK == 'otthon':
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
+
+elif local_settings.HOL_VAGYOK == 'droplet':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': local_settings.DB_NAME,
+            'USER': local_settings.DB_USER,
+            'PASSWORD': local_settings.DB_PASSWORD,
+            'HOST': local_settings.DB_HOST,
+            'PORT': '',
+        }
+    }
 
 
-# Password validation
-# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -88,8 +95,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/5.2/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
@@ -107,25 +112,16 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 USE_TZ = True
 
-# Email beállítások
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'  # Vagy más SMTP szerver
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'daniel.vincze15@gmail.com'  # Az email cím, amiről küldöd
-EMAIL_HOST_PASSWORD = 'lzzy fltp bsxf cvdl'  # Itt az email fiók jelszava vagy app-specifikus jelszó
+EMAIL_HOST_PASSWORD = local_settings.EMAIL_HOST_PASSWORD
 DEFAULT_FROM_EMAIL = 'daniel.vincze15@gmail.com'
 CONTACT_EMAIL = 'daniel.vincze15@gmail.com'  # A cél email cím
 
-# További szükséges beállítások
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.2/howto/static-files/
-
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
