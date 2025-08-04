@@ -23,8 +23,8 @@
 }
 
 .nevem {
-  grid-column: 1 / -1; /* Teljes szélességű lesz mobilnézetben */
-  font-size: clamp(1.5rem, 4vw, 2.2rem); /* Reszponzív betűméret */
+  grid-column: 1 / -1;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
   font-family: "Oswald";
   margin-bottom: 15px;
   color: var(--color-text-dark);
@@ -34,19 +34,21 @@
   padding-left: 15px;
 }
 
+/* Kép méretezése - itt történt a fő módosítás */
 .kepem {
   width: 100%;
-  max-width: 250px;
+  max-width: 180px; /* Eredeti 250px helyett */
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  justify-self: center; /* Középre igazítás */
+  justify-self: center;
+  align-self: start; /* Fent igazítva a tartalommal */
 }
 
 .rolam p {
   margin: 0;
   padding: 20px;
-  font-size: clamp(1rem, 2vw, 1.1rem); /* Reszponzív betűméret */
+  font-size: clamp(1rem, 2vw, 1.1rem);
   line-height: 1.6;
   color: var(--color-text-medium);
   background-color: var(--color-white);
@@ -61,12 +63,11 @@
     grid-template-columns: 1fr;
     gap: 20px;
     padding: 25px;
-    margin: 30px auto;
   }
   
   .kepem {
-    max-width: 200px;
-    grid-row: 2; /* Kép a szöveg alá kerül */
+    max-width: 150px; /* Eredeti 200px helyett */
+    grid-row: 2;
   }
   
   .rolam p {
@@ -80,11 +81,10 @@
 @media (max-width: 480px) {
   .rolam {
     padding: 20px;
-    margin: 20px auto;
   }
   
   .kepem {
-    max-width: 150px;
+    max-width: 120px; /* Eredeti 150px helyett */
   }
   
   .rolam p {
