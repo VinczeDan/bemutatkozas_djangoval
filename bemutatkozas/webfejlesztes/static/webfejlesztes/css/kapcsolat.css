@@ -10,7 +10,7 @@
 
 .kapcsolat h2 {
   text-align: center;
-  color: var(--color-text-dark);
+  color: var(--color-primary);
   margin-bottom: 30px;
   font-size: 28px;
 }

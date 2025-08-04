@@ -10,7 +10,3 @@ venv/
 staticfiles/
 media/
 local_settings.py
-<<<<<<< HEAD
-=======
-
->>>>>>> 791443783cf5460a3dfbcaf25d83ae10ebdc96b5
