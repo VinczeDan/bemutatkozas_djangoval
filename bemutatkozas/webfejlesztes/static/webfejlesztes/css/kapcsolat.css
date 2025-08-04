@@ -1,84 +1,117 @@
-.rolam {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+.kapcsolat {
+  max-width: 1000px; /* Wider container for 2 columns */
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: "Oswald";
+  background-color: var(--masik-feher);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.nevem {
-    color: #2c3e50;
-    font-size: 2.2em;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
+.kapcsolat h2 {
+  text-align: center;
+  color: var(--color-primary);
+  margin-bottom: 30px;
+  font-size: 28px;
 }
 
-.rolam img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    flex-shrink: 0;
+/* Flexbox container for columns */
+.contact-container {
+  display: flex;
+  gap: 40px; /* Space between columns */
 }
 
-#rolam-leiras {
-    text-align: justify;
-    flex: 1;
-    min-width: 300px;
-    font-size: 1.1em;
+.contact-info {
+  flex: 1; /* Takes 1 part of space */
+  padding: 20px;
+  background: var(--color-white);
+  border-radius: 8px;
+  box-shadow: var(--shadow-text-strong);
 }
 
-/* Reszponzív stílusok */
-@media (max-width: 700px) {
-    .rolam {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-    
-    #rolam-leiras {
-        order: 2; /* Leírás a kép alatt */
-        min-width: auto;
-        width: 100%;
-        padding: 0 10px;
-    }
-    
-    .rolam::before {
-        content: "";
-        display: block;
-        width: 100%;
-        order: 1; /* Kép a leírás felett */
-    }
-    
-    .rolam img {
-        order: 1;
-        width: 200px;
-        height: 200px;
-    }
+.contact-form {
+  flex: 1; /* Takes 1 part of space */
+  padding: 20px;
+  background: var(--color-white);
+  border-radius: 8px;
+  box-shadow: var(--shadow-text-strong);
+}
+
+/* Rest of your existing styles... */
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.contact-item i {
+  margin-right: 15px;
+  color: var(--color-primary);
+  font-size: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%; /* Full width inside form */
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid var(--color-text-lighter);
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Existing styles remain the same until media queries */
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contact-info,
+  .contact-form {
+    padding: 15px;
+  }
+  
+  .kapcsolat h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 480px) {
-    .nevem {
-        font-size: 1.8em;
-    }
-    
-    .rolam img {
-        width: 180px;
-        height: 180px;
-    }
-    
-    #rolam-leiras {
-        font-size: 1em;
-    }
+  .kapcsolat {
+    padding: 20px 15px;
+  }
+  
+  .kapcsolat h2 {
+    font-size: 1.5rem;
+  }
+  
+  .contact-item {
+    font-size: 14px;
+  }
+  
+  .contact-item i {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    font-size: 14px;
+  }
 }
