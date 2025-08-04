@@ -114,13 +114,15 @@ li a :not(:last-child)::before {
   cursor: pointer;
   transition: all 0.3s;
   border-radius: 5px;
+  -webkit-transition: all 0.3s;
 }
 
-#lang-btn:hover {
+#lang-btn:hover,
+#lang-btn:active,  /* Mobil touch esetén */
+#lang-btn:focus {  /* Fókuszálás esetén (pl. tab-ozás) */
   background-color: #f3821a;
   color: white;
 }
-
 
 /* Mobile styles */
 @media (max-width: 878px) {
@@ -169,5 +171,8 @@ li a :not(:last-child)::before {
   
   .hamburger.active .line:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
+  }
+  #lang-btn {
+    padding: 12px 20px; /* Nagyobb tapaszt felület */
   }
 }
