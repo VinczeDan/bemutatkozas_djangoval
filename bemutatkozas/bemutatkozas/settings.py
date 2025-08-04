@@ -102,6 +102,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'webfejlesztes', 'static'),
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 TIME_ZONE = 'UTC'
@@ -121,7 +122,6 @@ EMAIL_HOST_PASSWORD = local_settings.EMAIL_HOST_PASSWORD
 DEFAULT_FROM_EMAIL = 'daniel.vincze15@gmail.com'
 CONTACT_EMAIL = 'daniel.vincze15@gmail.com'  # A cél email cím
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
