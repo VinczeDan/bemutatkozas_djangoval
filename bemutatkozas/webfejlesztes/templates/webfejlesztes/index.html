@@ -9,20 +9,71 @@
     <!-- CSS Files -->
     <link rel="stylesheet" href="{% static 'webfejlesztes/css/szinek.css' %}" />
     <link rel="stylesheet" href="{% static 'webfejlesztes/css/header.css' %}" />
-    <link rel="stylesheet" href="{% static 'webfejlesztes/css/masodik-blokk.css' %}" />
-    <link rel="stylesheet" href="{% static 'webfejlesztes/css/szolgaltatasok.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'webfejlesztes/css/masodik-blokk.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'webfejlesztes/css/szolgaltatasok.css' %}"
+    />
     <link rel="stylesheet" href="{% static 'webfejlesztes/css/rolam.css' %}" />
-    <link rel="stylesheet" href="{% static 'webfejlesztes/css/munkaim.css' %}" />
-    <link rel="stylesheet" href="{% static 'webfejlesztes/css/kapcsolat.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'webfejlesztes/css/munkaim.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'webfejlesztes/css/kapcsolat.css' %}"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Michroma&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=web" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=web"
+    />
+
+    <!-- Favicon config -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{% static 'webfejlesztes/favicon_io/apple-touch-icon.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{% static 'webfejlesztes/favicon_io/favicon-32x32.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{% static 'webfejlesztes/favicon_io/favicon-16x16.png' %}"
+    />
+    <link
+      rel="manifest"
+      href="{% static 'webfejlesztes/favicon_io/site.webmanifest' %}"
+    />
+    <link
+      rel="shortcut icon"
+      href="{% static 'webfejlesztes/favicon_io/favicon.ico' %}"
+    />
 
     <script src="{% static 'webfejlesztes/css/script.js' %}"></script>
     <script src="{% static 'webfejlesztes/css/contact.js' %}"></script>
@@ -41,7 +92,11 @@
         </div>
         <ul class="nav-links">
           <li><a href="#rolam" id="rolam-link">RÓLAM</a></li>
-          <li><a href="#szolgaltatasok" id="szolgaltatasok-link">SZOLGÁLTATÁSOK</a></li>
+          <li>
+            <a href="#szolgaltatasok" id="szolgaltatasok-link"
+              >SZOLGÁLTATÁSOK</a
+            >
+          </li>
           <li><a href="#referenciak" id="referenciak-link">REFERENCIÁK</a></li>
           <li><a href="#kapcsolat" id="kapcsolat-link">KAPCSOLAT</a></li>
         </ul>
@@ -54,21 +109,38 @@
       <div class="hero-banner">
         <div class="hero-content">
           <h1 class="cim" id="cim-kozepen">WEBFEJLESZTÉS</h1>
-          <p class="motto1" id="motto1">Gyors, modern, egyedi - mint a weboldalad</p>
+          <p class="motto1" id="motto1">
+            Gyors, modern, egyedi - mint a weboldalad
+          </p>
           <p class="motto2" id="motto2">A jövőd online kezdődik</p>
         </div>
       </div>
       <div class="flipped-shape">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 50" preserveAspectRatio="none">
-          <path opacity="0.33" d="M473,33.7c-203.9,44.1-263.1-17-320.3,0C66,59.6,0,29.9,0,29.9V0h1000v29.9c0,0-62.1,13-94.9,14.6c-32.8,1.7-62.8-6.1-75.8-11C806,24.8,745.3,4.3,694.9,2.4S492.4,29.5,473,33.7z"/>
-          <path opacity="0.66" d="M734,33.7c-45.5,0-77.2-11.6-129.1-19.6c-28.6-4.4-150.3-5.1-254,19.6s-91.7-17.2-149.2,0C115.7,59.2,0,19.9,0,19.9V0h1000v18.2c0,0-28.2-9.3-92.1-9.3C810.2,9,775.7,33.7,734,33.7z"/>
-          <path d="M766.1,14.5c-200-28.8-266,32.8-395.1,9.8C242,0.9,242,2.7,184.8,10.3C128,17.9,132.3,22.4,89.9,26.2C28.6,31.9,0,0,0,0h1000c0,0-9.9,20.5-83.6,24.1S829.6,23.5,766.1,14.5z"/>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1000 50"
+          preserveAspectRatio="none"
+        >
+          <path
+            opacity="0.33"
+            d="M473,33.7c-203.9,44.1-263.1-17-320.3,0C66,59.6,0,29.9,0,29.9V0h1000v29.9c0,0-62.1,13-94.9,14.6c-32.8,1.7-62.8-6.1-75.8-11C806,24.8,745.3,4.3,694.9,2.4S492.4,29.5,473,33.7z"
+          />
+          <path
+            opacity="0.66"
+            d="M734,33.7c-45.5,0-77.2-11.6-129.1-19.6c-28.6-4.4-150.3-5.1-254,19.6s-91.7-17.2-149.2,0C115.7,59.2,0,19.9,0,19.9V0h1000v18.2c0,0-28.2-9.3-92.1-9.3C810.2,9,775.7,33.7,734,33.7z"
+          />
+          <path
+            d="M766.1,14.5c-200-28.8-266,32.8-395.1,9.8C242,0.9,242,2.7,184.8,10.3C128,17.9,132.3,22.4,89.9,26.2C28.6,31.9,0,0,0,0h1000c0,0-9.9,20.5-83.6,24.1S829.6,23.5,766.1,14.5z"
+          />
         </svg>
       </div>
 
       <div class="rolam" id="rolam">
         <h2 class="nevem">Vincze Dániel</h2>
-        <img src="{% static '/webfejlesztes/images/niggsok.png' %}" alt="rolam kep"/>
+        <img
+          src="{% static '/webfejlesztes/images/niggsok.png' %}"
+          alt="rolam kep"
+        />
         <p id="rolam-leiras">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque hic
           quisquam vitae, ut doloremque dolores dignissimos pariatur quo
@@ -85,43 +157,93 @@
       <div class="szolgaltatasok" id="szolgaltatasok">
         <h1 class="szolgaltatas_cim" id="szolgaltatasok-cim">Szolgáltatások</h1>
         <div class="elementor-shape-top">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 50" preserveAspectRatio="none">
-            <path opacity="0.33" d="M473,33.7c-203.9,44.1-263.1-17-320.3,0C66,59.6,0,29.9,0,29.9V0h1000v29.9c0,0-62.1,13-94.9,14.6c-32.8,1.7-62.8-6.1-75.8-11C806,24.8,745.3,4.3,694.9,2.4S492.4,29.5,473,33.7z"/>
-            <path opacity="0.66" d="M734,33.7c-45.5,0-77.2-11.6-129.1-19.6c-28.6-4.4-150.3-5.1-254,19.6s-91.7-17.2-149.2,0C115.7,59.2,0,19.9,0,19.9V0h1000v18.2c0,0-28.2-9.3-92.1-9.3C810.2,9,775.7,33.7,734,33.7z"/>
-            <path d="M766.1,14.5c-200-28.8-266,32.8-395.1,9.8C242,0.9,242,2.7,184.8,10.3C128,17.9,132.3,22.4,89.9,26.2C28.6,31.9,0,0,0,0h1000c0,0-9.9,20.5-83.6,24.1S829.6,23.5,766.1,14.5z"/>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1000 50"
+            preserveAspectRatio="none"
+          >
+            <path
+              opacity="0.33"
+              d="M473,33.7c-203.9,44.1-263.1-17-320.3,0C66,59.6,0,29.9,0,29.9V0h1000v29.9c0,0-62.1,13-94.9,14.6c-32.8,1.7-62.8-6.1-75.8-11C806,24.8,745.3,4.3,694.9,2.4S492.4,29.5,473,33.7z"
+            />
+            <path
+              opacity="0.66"
+              d="M734,33.7c-45.5,0-77.2-11.6-129.1-19.6c-28.6-4.4-150.3-5.1-254,19.6s-91.7-17.2-149.2,0C115.7,59.2,0,19.9,0,19.9V0h1000v18.2c0,0-28.2-9.3-92.1-9.3C810.2,9,775.7,33.7,734,33.7z"
+            />
+            <path
+              d="M766.1,14.5c-200-28.8-266,32.8-395.1,9.8C242,0.9,242,2.7,184.8,10.3C128,17.9,132.3,22.4,89.9,26.2C28.6,31.9,0,0,0,0h1000c0,0-9.9,20.5-83.6,24.1S829.6,23.5,766.1,14.5z"
+            />
           </svg>
         </div>
         <div class="szolgaltatas-csempek">
           <div class="weboldal-keszietes">
             <h2 id="szolg1-cim">WEBOLDAL KÉSZÍTÉS</h2>
             <p id="szolg1-leiras">mindenkinek kell weboldal</p>
-            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#e3e3e3">
-              <path d="M168-192q-29.7 0-50.85-21.16Q96-234.32 96-264.04v-432.24Q96-726 117.15-747T168-768h624q29.7 0 50.85 21.16Q864-725.68 864-695.96v432.24Q864-234 842.85-213T792-192H168Zm0-72h408v-120H168v120Zm480 0h144v-312H648v312ZM168-456h408v-120H168v120Z"/>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="20px"
+              viewBox="0 -960 960 960"
+              width="20px"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M168-192q-29.7 0-50.85-21.16Q96-234.32 96-264.04v-432.24Q96-726 117.15-747T168-768h624q29.7 0 50.85 21.16Q864-725.68 864-695.96v432.24Q864-234 842.85-213T792-192H168Zm0-72h408v-120H168v120Zm480 0h144v-312H648v312ZM168-456h408v-120H168v120Z"
+              />
             </svg>
           </div>
 
           <div class="weboldal-szerkesztes">
-            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#e3e3e3">
-              <path d="M216-216h51l375-375-51-51-375 375v51Zm-72 72v-153l498-498q11-11 23.84-16 12.83-5 27-5 14.16 0 27.16 5t24 16l51 51q11 11 16 24t5 26.54q0 14.45-5.02 27.54T795-642L297-144H144Zm600-549-51-51 51 51Zm-127.95 76.95L591-642l51 51-25.95-25.05Z"/>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="20px"
+              viewBox="0 -960 960 960"
+              width="20px"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M216-216h51l375-375-51-51-375 375v51Zm-72 72v-153l498-498q11-11 23.84-16 12.83-5 27-5 14.16 0 27.16 5t24 16l51 51q11 11 16 24t5 26.54q0 14.45-5.02 27.54T795-642L297-144H144Zm600-549-51-51 51 51Zm-127.95 76.95L591-642l51 51-25.95-25.05Z"
+              />
             </svg>
             <h2 id="szolg2-cim">WEBOLDAL SZERKESZTES</h2>
-            <p id="szolg2-leiras">fejlesztes, tartalom feltoltes, szerkesztés is</p>
+            <p id="szolg2-leiras">
+              fejlesztes, tartalom feltoltes, szerkesztés is
+            </p>
           </div>
 
           <div class="modern-design">
             <h2 id="szolg3-cim">Modern design</h2>
             <p id="szolg3-leiras">legyen látványos és egyedi a weboldalad</p>
-            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#e3e3e3">
-              <path d="M168-516q-30 0-51-21.15T96-588v-108q0-29 21.15-50.5T168-768h360v252H168Zm0-72h288v-108H168v108Zm0 396q-29.7 0-50.85-21.15Q96-234.3 96-264v-108q0-29 21.15-50.5T168-444h432v252H168Zm0-72h360v-108H168v108Zm504 72v-324h-72v-252h264l-69 173h69L672-192ZM192-294h48v-48h-48v48Zm0-324h48v-48h-48v48Zm-24 30v-108 108Zm0 324v-108 108Z"/>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="20px"
+              viewBox="0 -960 960 960"
+              width="20px"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M168-516q-30 0-51-21.15T96-588v-108q0-29 21.15-50.5T168-768h360v252H168Zm0-72h288v-108H168v108Zm0 396q-29.7 0-50.85-21.15Q96-234.3 96-264v-108q0-29 21.15-50.5T168-444h432v252H168Zm0-72h360v-108H168v108Zm504 72v-324h-72v-252h264l-69 173h69L672-192ZM192-294h48v-48h-48v48Zm0-324h48v-48h-48v48Zm-24 30v-108 108Zm0 324v-108 108Z"
+              />
             </svg>
           </div>
         </div>
 
         <div class="flipped-shape">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 50" preserveAspectRatio="none">
-            <path opacity="0.33" d="M473,33.7c-203.9,44.1-263.1-17-320.3,0C66,59.6,0,29.9,0,29.9V0h1000v29.9c0,0-62.1,13-94.9,14.6c-32.8,1.7-62.8-6.1-75.8-11C806,24.8,745.3,4.3,694.9,2.4S492.4,29.5,473,33.7z"/>
-            <path opacity="0.66" d="M734,33.7c-45.5,0-77.2-11.6-129.1-19.6c-28.6-4.4-150.3-5.1-254,19.6s-91.7-17.2-149.2,0C115.7,59.2,0,19.9,0,19.9V0h1000v18.2c0,0-28.2-9.3-92.1-9.3C810.2,9,775.7,33.7,734,33.7z"/>
-            <path d="M766.1,14.5c-200-28.8-266,32.8-395.1,9.8C242,0.9,242,2.7,184.8,10.3C128,17.9,132.3,22.4,89.9,26.2C28.6,31.9,0,0,0,0h1000c0,0-9.9,20.5-83.6,24.1S829.6,23.5,766.1,14.5z"/>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1000 50"
+            preserveAspectRatio="none"
+          >
+            <path
+              opacity="0.33"
+              d="M473,33.7c-203.9,44.1-263.1-17-320.3,0C66,59.6,0,29.9,0,29.9V0h1000v29.9c0,0-62.1,13-94.9,14.6c-32.8,1.7-62.8-6.1-75.8-11C806,24.8,745.3,4.3,694.9,2.4S492.4,29.5,473,33.7z"
+            />
+            <path
+              opacity="0.66"
+              d="M734,33.7c-45.5,0-77.2-11.6-129.1-19.6c-28.6-4.4-150.3-5.1-254,19.6s-91.7-17.2-149.2,0C115.7,59.2,0,19.9,0,19.9V0h1000v18.2c0,0-28.2-9.3-92.1-9.3C810.2,9,775.7,33.7,734,33.7z"
+            />
+            <path
+              d="M766.1,14.5c-200-28.8-266,32.8-395.1,9.8C242,0.9,242,2.7,184.8,10.3C128,17.9,132.3,22.4,89.9,26.2C28.6,31.9,0,0,0,0h1000c0,0-9.9,20.5-83.6,24.1S829.6,23.5,766.1,14.5z"
+            />
           </svg>
         </div>
       </div>
