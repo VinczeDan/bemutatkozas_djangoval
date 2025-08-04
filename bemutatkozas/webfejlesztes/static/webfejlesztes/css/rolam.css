@@ -23,8 +23,8 @@
 }
 
 .nevem {
-  grid-column: 1;
-  font-size: 2.2rem;
+  grid-column: 1 / -1; /* Teljes szélességű lesz mobilnézetben */
+  font-size: clamp(1.5rem, 4vw, 2.2rem); /* Reszponzív betűméret */
   font-family: "Oswald";
   margin-bottom: 15px;
   color: var(--color-text-dark);
@@ -34,76 +34,61 @@
   padding-left: 15px;
 }
 
-
 .kepem {
-  grid-column: 1;
   width: 100%;
   max-width: 250px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  justify-self: center; /* Középre igazítás */
 }
 
-
-
 .rolam p {
-  grid-column: 2;
-  grid-row: 1 / span 2;
   margin: 0;
   padding: 20px;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2vw, 1.1rem); /* Reszponzív betűméret */
   line-height: 1.6;
   color: var(--color-text-medium);
   background-color: var(--color-white);
   border-radius: 10px;
   box-shadow: var(--shadow-box);
   border-left: 4px solid var(--color-primary);
-  align-self: center;
-  height: 100%;
-  display: flex;
-  align-items: center;
 }
-/* Existing styles remain the same until media queries */
 
+/* Tablet nézet (768px alatt) */
 @media (max-width: 768px) {
   .rolam {
-    padding: 20px;
-    margin: 20px auto;
     grid-template-columns: 1fr;
     gap: 20px;
-  }
-  
-  .nevem {
-    font-size: 1.8rem;
-    padding-left: 10px;
-  }
-  
-  .nevem::after {
-    bottom: 75px;
-    width: 50px;
+    padding: 25px;
+    margin: 30px auto;
   }
   
   .kepem {
     max-width: 200px;
-    margin: 0 auto;
+    grid-row: 2; /* Kép a szöveg alá kerül */
   }
   
   .rolam p {
+    grid-column: 1;
+    grid-row: 3;
     padding: 15px;
-    font-size: 1rem;
   }
 }
 
+/* Mobil nézet (480px alatt) */
 @media (max-width: 480px) {
   .rolam {
-    padding: 15px;
-  }
-  
-  .nevem {
-    font-size: 1.5rem;
+    padding: 20px;
+    margin: 20px auto;
   }
   
   .kepem {
     max-width: 150px;
+  }
+  
+  .rolam p {
+    padding: 12px;
+    font-size: 0.95rem;
   }
 }
