@@ -90,7 +90,7 @@ const translations = {
     szolg3_cim: "Modern design",
     szolg3_leiras: "legyen látványos és egyedi a weboldalad",
     munkaim_cim: "MUNKÁIM",
-    kapcsolat_cim: "Kapcsolat",
+    kapcsolat_cim: "KAPCSOLAT",
     helyszin: "Budapest, Magyarország",
   },
   en: {
@@ -113,7 +113,7 @@ const translations = {
     szolg3_cim: "Modern Design",
     szolg3_leiras: "Make your website eye-catching and unique",
     munkaim_cim: "MY WORK",
-    kapcsolat_cim: "Contact",
+    kapcsolat_cim: "CONTACT",
     helyszin: "Budapest, Hungary",
   },
 };

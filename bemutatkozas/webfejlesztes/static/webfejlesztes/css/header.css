@@ -106,22 +106,21 @@ li a :not(:last-child)::before {
 }
 
 #lang-btn {
-  background: none;
+  background: #f3821a; /* Narancssárga háttér */
+  color: white; /* Fehér szöveg */
   border: 2px solid #f3821a;
-  color: #f3821a;
   padding: 5px 10px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s;
   border-radius: 5px;
-  -webkit-transition: all 0.3s;
 }
 
 #lang-btn:hover,
-#lang-btn:active,  /* Mobil touch esetén */
-#lang-btn:focus {  /* Fókuszálás esetén (pl. tab-ozás) */
-  background-color: #f3821a;
-  color: white;
+#lang-btn:active,
+#lang-btn:focus {
+  background-color: #f3821a; /* Marad narancssárga */
+  color: white; /* Marad fehér */
 }
 
 /* Mobile styles */
