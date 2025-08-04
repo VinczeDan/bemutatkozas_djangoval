@@ -9,4 +9,4 @@ venv/
 *.log
 staticfiles/
 media/
-
+local_settings.py
