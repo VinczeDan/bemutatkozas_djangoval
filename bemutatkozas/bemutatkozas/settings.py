@@ -118,7 +118,7 @@ EMAIL_HOST = 'smtp.gmail.com'  # Vagy más SMTP szerver
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'daniel.vincze15@gmail.com'  # Az email cím, amiről küldöd
-EMAIL_HOST_PASSWORD = local_settings.EMAIL_HOST_PASSWORD
+EMAIL_HOST_PASSWORD = 'ehia vhrj fstf wqqq'
 DEFAULT_FROM_EMAIL = 'daniel.vincze15@gmail.com'
 CONTACT_EMAIL = 'daniel.vincze15@gmail.com'  # A cél email cím
 
