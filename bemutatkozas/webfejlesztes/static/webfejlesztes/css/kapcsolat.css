@@ -72,6 +72,10 @@
   font-size: 16px;
 }
 
+.contact-item span {
+  text-decoration: none;
+}
+
 /* Existing styles remain the same until media queries */
 
 @media (max-width: 768px) {
