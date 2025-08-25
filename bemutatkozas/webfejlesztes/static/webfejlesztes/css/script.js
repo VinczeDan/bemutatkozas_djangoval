@@ -34,7 +34,6 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll("nav a").forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
-      // Only prevent default for same-page links
       if (this.getAttribute("href").startsWith("#")) {
         e.preventDefault();
 
@@ -63,12 +62,15 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Responsive fix for images
 window.addEventListener("resize", function () {
   const images = document.querySelectorAll("img");
   images.forEach((img) => {
     img.style.top = Math.floor(img.getBoundingClientRect().top) + "px";
   });
 });
+
+// Translations
 const translations = {
   hu: {
     rolam: "RÓLAM",
@@ -81,14 +83,14 @@ const translations = {
     motto1: "Gyors, modern, egyedi - mint a weboldalad",
     motto2: "A jövőd online kezdődik",
     rolam_leiras:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque hic quisquam vitae, ut doloremque dolores dignissimos pariatur quo exercitationem reprehenderit, ex, architecto voluptatum soluta? Suscipit ipsa commodi aliquid architecto in. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint mollitia ipsum aliquid voluptatum itaque exercitationem quasi ex nesciunt aut recusandae quas, cum, enim qui sunt ducimus illum odio error molestiae. Cum rerum velit iste voluptas dolore cupiditate, amet, similique deleniti autem asperiores repellat ad! Saepe, harum labore autem commodi odio qui",
+      "<strong>Szia! Vincze Dániel vagyok</strong>, webfejlesztéssel foglalkozom. Segítek abban, hogy ötletedből <em>modern, letisztult és jól működő weboldal</em> szülessen – legyen az bemutatkozó oldal, kisebb projekt vagy induló vállalkozás webes megjelenése. <br> <br> Nálam minden egy kézben van: a <strong>tervezéstől a fejlesztésig</strong>. Fontos számomra, hogy érthető, átlátható megoldásokat kapj, és addig finomítom a munkát, amíg pontosan olyan nem lesz, amilyet elképzeltél.",
     szolgaltatasok_cim: "Szolgáltatások",
     szolg1_cim: "WEBOLDAL KÉSZÍTÉS",
-    szolg1_leiras: "mindenkinek kell weboldal",
-    szolg2_cim: "WEBOLDAL SZERKESZTES",
-    szolg2_leiras: "fejlesztes, tartalom feltoltes, szerkesztés is",
-    szolg3_cim: "Modern design",
-    szolg3_leiras: "legyen látványos és egyedi a weboldalad",
+    szolg1_leiras: "Mindenkinek kell weboldal",
+    szolg2_cim: "WEBOLDAL SZERKESZTÉS",
+    szolg2_leiras: "Fejlesztés, tartalom feltöltés, szerkesztés is",
+    szolg3_cim: "MODERN DESIGN",
+    szolg3_leiras: "Legyen látványos és egyedi a weboldalad",
     munkaim_cim: "MUNKÁIM",
     kapcsolat_cim: "KAPCSOLAT",
     helyszin: "Budapest, Magyarország",
@@ -104,13 +106,13 @@ const translations = {
     motto1: "Fast, modern, unique - just like your website",
     motto2: "Your future starts online",
     rolam_leiras:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eveniet vitae, dolores doloremque pariatur quos reprehenderit architecto voluptatum soluta. I strive to create impactful, tailor-made websites that stand out online. Whether it's coding, design, or content strategy – I bring your digital vision to life with precision and creativity.",
+      "<strong>Hi, I'm Dániel Vincze</strong>, a web developer. I help turn your ideas into <em>modern, clean, and fully functional websites</em> – whether it's a personal page, a small project, or the online presence of a startup. <br> <br> With me, everything is handled in one place: from <strong>design to development</strong>. My priority is to provide clear, transparent solutions, and I keep refining the work until it looks exactly the way you envisioned.",
     szolgaltatasok_cim: "Services",
     szolg1_cim: "WEBSITE CREATION",
     szolg1_leiras: "Every business needs a website",
     szolg2_cim: "WEBSITE EDITING",
     szolg2_leiras: "Improvements, content updates, and custom edits",
-    szolg3_cim: "Modern Design",
+    szolg3_cim: "MODERN DESIGN",
     szolg3_leiras: "Make your website eye-catching and unique",
     munkaim_cim: "MY WORK",
     kapcsolat_cim: "CONTACT",
@@ -141,8 +143,8 @@ function updateTexts() {
   document.getElementById("motto1").textContent = t.motto1;
   document.getElementById("motto2").textContent = t.motto2;
 
-  // About section
-  document.getElementById("rolam-leiras").textContent = t.rolam_leiras;
+  // About section (HTML kell, nem textContent!)
+  document.getElementById("rolam-leiras").innerHTML = t.rolam_leiras;
 
   // Services section
   document.getElementById("szolgaltatasok-cim").textContent =
@@ -161,4 +163,3 @@ function updateTexts() {
   document.getElementById("kapcsolat-cim").textContent = t.kapcsolat_cim;
   document.getElementById("helyszin").textContent = t.helyszin;
 }
-
