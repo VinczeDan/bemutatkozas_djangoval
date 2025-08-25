@@ -87,7 +87,7 @@ const translations = {
     szolgaltatasok_cim: "Szolgáltatások",
     szolg1_cim: "WEBOLDAL KÉSZÍTÉS",
     szolg1_leiras: "Mindenkinek kell weboldal",
-    szolg2_cim: "WEBOLDAL SZERKESZTÉS",
+    szolg2_cim: "WEBOLDAL SZERKESZTfeafaefÉS",
     szolg2_leiras: "Fejlesztés, tartalom feltöltés, szerkesztés is",
     szolg3_cim: "MODERN DESIGN",
     szolg3_leiras: "Legyen látványos és egyedi a weboldalad",
