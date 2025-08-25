@@ -163,3 +163,12 @@ function updateTexts() {
   document.getElementById("kapcsolat-cim").textContent = t.kapcsolat_cim;
   document.getElementById("helyszin").textContent = t.helyszin;
 }
+
+// Betöltéskor inicializálás
+document.addEventListener("DOMContentLoaded", function () {
+  // Ellenőrizzük, hogy minden elem létezik a DOM-ban
+  console.log("DOM loaded, initializing language system");
+
+  // Opcionálisan: állítsd be az alapértelmezett nyelvet
+  updateTexts();
+});
