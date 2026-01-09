@@ -6,12 +6,19 @@
   border-radius: 10px;
 }
 
-.kapcsolat h2 {
+.kapcsolat-felirat {
   text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
   color: var(--color-primary);
-  margin-bottom: 30px;
-  font-size: 28px;
+  font-family: "Oswald";
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  position: relative;
+  grid-column: 1 / -1; /* Makes the title span all columns */
 }
+
+
 
 /* Flexbox container for columns */
 .contact-container {
