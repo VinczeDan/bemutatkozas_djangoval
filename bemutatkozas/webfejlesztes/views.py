@@ -22,9 +22,9 @@ def fooldal(request):
             # Email küldése a weboldal adminjának
             admin_subject = f'Új üzenet a weboldalon: {name}'
             admin_message = f'''
-            Név: {name}
+            Név/ Name: {name}
             Email: {email}
-            Üzenet: {message}
+            Üzenet/ Massage: {message}
             '''
             send_mail(
                 admin_subject,
