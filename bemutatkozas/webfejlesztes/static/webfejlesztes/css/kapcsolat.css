@@ -3,9 +3,7 @@
   margin: 0 auto;
   padding: 40px 20px;
   font-family: "Oswald";
-  background-color: var(--masik-feher);
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .kapcsolat h2 {
@@ -26,7 +24,6 @@
   padding: 20px;
   background: var(--color-white);
   border-radius: 8px;
-  box-shadow: var(--shadow-text-strong);
 }
 
 .contact-form {
@@ -34,7 +31,6 @@
   padding: 20px;
   background: var(--color-white);
   border-radius: 8px;
-  box-shadow: var(--shadow-text-strong);
 }
 
 /* Rest of your existing styles... */
