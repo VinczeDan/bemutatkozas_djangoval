@@ -6,7 +6,7 @@
   border-radius: 10px;
 }
 
-.kapcsolat-felirat {
+.kapcsolat .kapcsolat-felirat {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 3rem;
@@ -105,8 +105,8 @@
     padding: 20px 15px;
   }
   
-  .kapcsolat h2 {
-    font-size: 1.5rem;
+  .kapcsolat h1 {
+  font-size: 1.8rem;
   }
   
   .contact-item {
