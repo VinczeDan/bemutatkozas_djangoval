@@ -143,26 +143,30 @@ function updateTexts() {
   document.getElementById("motto1").textContent = t.motto1;
   document.getElementById("motto2").textContent = t.motto2;
 
-  // About section (HTML kell, nem textContent!)
+  // About
   document.getElementById("rolam-leiras").innerHTML = t.rolam_leiras;
 
-  // Services section
+  // Services
   document.getElementById("szolgaltatasok-cim").textContent =
     t.szolgaltatasok_cim;
-  document.getElementById("szolg1-cim").textContent = t.szolg1_cim;
-  document.getElementById("szolg1-leiras").textContent = t.szolg1_leiras;
-  document.getElementById("szolg2-cim").textContent = t.szolg2_cim;
-  document.getElementById("szolg2-leiras").textContent = t.szolg2_leiras;
-  document.getElementById("szolg3-cim").textContent = t.szolg3_cim;
-  document.getElementById("szolg3-leiras").textContent = t.szolg3_leiras;
 
-  // Portfolio section
-  document.getElementById("munkaim-cim").textContent = t.munkaim_cim;
+  document.getElementById("szolg1_cim").textContent = t.szolg1_cim;
+  document.getElementById("szolg1_leiras").textContent = t.szolg1_leiras;
 
-  // Contact section
-  document.getElementById("kapcsolat-cim").textContent = t.kapcsolat_cim;
+  document.getElementById("szolg2_cim").textContent = t.szolg2_cim;
+  document.getElementById("szolg2_leiras").textContent = t.szolg2_leiras;
+
+  document.getElementById("szolg3_cim").textContent = t.szolg3_cim;
+  document.getElementById("szolg3_leiras").textContent = t.szolg3_leiras;
+
+  // Portfolio
+  document.getElementById("munkaim_cim").textContent = t.munkaim_cim;
+
+  // Contact
+  document.getElementById("kapcsolat_cim").textContent = t.kapcsolat_cim;
   document.getElementById("helyszin").textContent = t.helyszin;
 }
+
 
 // Betöltéskor inicializálás
 document.addEventListener("DOMContentLoaded", function () {
