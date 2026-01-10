@@ -114,13 +114,19 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 USE_TZ = True
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'  # Vagy más SMTP szerver
+
+EMAIL_HOST = 'smtp-relay.brevo.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'daniel.vincze15@gmail.com'  # Az email cím, amiről küldöd
-EMAIL_HOST_PASSWORD = local_settings.EMAIL_HOST_PASSWORD
-DEFAULT_FROM_EMAIL = 'daniel.vincze15@gmail.com'
-CONTACT_EMAIL = 'daniel.vincze15@gmail.com'  # A cél email cím
+
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = local_settings.BREVO_SMTP_KEY
+
+DEFAULT_FROM_EMAIL = local_settings.DEFAULT_FROM_EMAIL
+CONTACT_EMAIL = local_settings.CONTACT_EMAIL
+
+
+
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
