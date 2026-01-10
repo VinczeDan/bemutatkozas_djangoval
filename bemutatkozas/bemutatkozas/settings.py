@@ -1,9 +1,20 @@
 from pathlib import Path
 import os
-import local_settings
+import sys
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+sys.path.append(str(BASE_DIR))
+
+try:
+    from . import local_settings
+
+except ImportError:
+    raise ImportError("local_settings.py nem található a projekt gyökérben!")
+
+BREVO_API_KEY = local_settings.BREVO_API_KEY
+DEFAULT_FROM_EMAIL = local_settings.DEFAULT_FROM_EMAIL
+CONTACT_EMAIL = local_settings.CONTACT_EMAIL
 
 
 SECRET_KEY = local_settings.SECRET_KEY
@@ -113,17 +124,17 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 USE_TZ = True
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-EMAIL_HOST = 'smtp-relay.brevo.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+#EMAIL_HOST = 'smtp-relay.brevo.com'
+#EMAIL_PORT = 587
+#EMAIL_USE_TLS = True
 
-EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = local_settings.BREVO_SMTP_KEY
+#EMAIL_HOST_USER = 'apikey'
+#EMAIL_HOST_PASSWORD = local_settings.BREVO_SMTP_KEY
 
-DEFAULT_FROM_EMAIL = local_settings.DEFAULT_FROM_EMAIL
-CONTACT_EMAIL = local_settings.CONTACT_EMAIL
+#DEFAULT_FROM_EMAIL = local_settings.DEFAULT_FROM_EMAIL
+#CONTACT_EMAIL = local_settings.CONTACT_EMAIL
 
 
 
