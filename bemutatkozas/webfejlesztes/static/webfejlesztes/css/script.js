@@ -70,6 +70,8 @@ window.addEventListener("resize", function () {
   });
 });
 
+// ... [A többi menükezelő függvény változatlan marad]
+
 // Translations
 const translations = {
   hu: {
@@ -82,15 +84,16 @@ const translations = {
     cim_kozepen: "WEBFEJLESZTÉS",
     motto1: "Gyors, modern, egyedi - mint a weboldalad",
     motto2: "A jövőd online kezdődik",
+    hero_cta: "Ingyenes ajánlatkérés",
     rolam_leiras:
       "<strong>Szia! Vincze Dániel vagyok</strong>, webfejlesztéssel foglalkozom. Segítek abban, hogy ötletedből <em>modern, letisztult és jól működő weboldal</em> szülessen – legyen az bemutatkozó oldal, kisebb projekt vagy induló vállalkozás webes megjelenése. <br> <br> Nálam minden egy kézben van: a <strong>tervezéstől a fejlesztésig</strong>. Fontos számomra, hogy érthető, átlátható megoldásokat kapj, és addig finomítom a munkát, amíg pontosan olyan nem lesz, amilyet elképzeltél.",
     szolgaltatasok_cim: "Szolgáltatások",
     szolg1_cim: "WEBOLDAL KÉSZÍTÉS",
-    szolg1_leiras: "Mindenkinek kell weboldal",
-    szolg2_cim: "WEBOLDAL SZERKESZTÉS",
-    szolg2_leiras: "Fejlesztés, tartalom feltöltés, szerkesztés is",
+    szolg1_leiras: "Egyedi, modern és reszponzív weboldalak tervezése vállalkozások számára.",
+    szolg2_cim: "WEBOLDAL KARBANTARTÁS",
+    szolg2_leiras: "Továbbfejlesztés, tartalomkezelés és meglévő rendszerek optimalizálása.",
     szolg3_cim: "MODERN DESIGN",
-    szolg3_leiras: "Legyen látványos és egyedi a weboldalad",
+    szolg3_leiras: "Letisztult arculat, figyelemfelkeltő vizuális megoldások és UI/UX tervezés.",
     munkaim_cim: "MUNKÁIM",
     kapcsolat_cim: "KAPCSOLAT",
     helyszin: "Budapest, Magyarország",
@@ -105,15 +108,16 @@ const translations = {
     cim_kozepen: "WEB DEVELOPMENT",
     motto1: "Fast, modern, unique - just like your website",
     motto2: "Your future starts online",
+    hero_cta: "Get a Free Quote",
     rolam_leiras:
       "<strong>Hi, I'm Dániel Vincze</strong>, a web developer. I help turn your ideas into <em>modern, clean, and fully functional websites</em> – whether it's a personal page, a small project, or the online presence of a startup. <br> <br> With me, everything is handled in one place: from <strong>design to development</strong>. My priority is to provide clear, transparent solutions, and I keep refining the work until it looks exactly the way you envisioned.",
     szolgaltatasok_cim: "Services",
     szolg1_cim: "WEBSITE CREATION",
-    szolg1_leiras: "Every business needs a website",
-    szolg2_cim: "WEBSITE EDITING",
-    szolg2_leiras: "Improvements, content updates, and custom edits",
+    szolg1_leiras: "Custom, modern, and responsive website design for businesses.",
+    szolg2_cim: "WEBSITE MAINTENANCE",
+    szolg2_leiras: "Upgrades, content updates, and custom system optimization.",
     szolg3_cim: "MODERN DESIGN",
-    szolg3_leiras: "Make your website eye-catching and unique",
+    szolg3_leiras: "Clean branding, eye-catching visual solutions, and UI/UX design.",
     munkaim_cim: "MY WORK",
     kapcsolat_cim: "CONTACT",
     helyszin: "Budapest, Hungary",
@@ -137,42 +141,31 @@ function updateTexts() {
   document.getElementById("kapcsolat-link").textContent = t.kapcs;
   document.getElementById("lang-btn").textContent = t.langBtn;
 
-  // Header
+  // Header / Hero
   document.getElementById("motto").textContent = t.motto;
   document.getElementById("cim-kozepen").textContent = t.cim_kozepen;
   document.getElementById("motto1").textContent = t.motto1;
   document.getElementById("motto2").textContent = t.motto2;
+  document.getElementById("hero-cta").textContent = t.hero_cta;
 
   // About
   document.getElementById("rolam-leiras").innerHTML = t.rolam_leiras;
 
   // Services
-  document.getElementById("szolgaltatasok-cim").textContent =
-    t.szolgaltatasok_cim;
-
+  document.getElementById("szolgaltatasok-cim").textContent = t.szolgaltatasok_cim;
   document.getElementById("szolg1_cim").textContent = t.szolg1_cim;
   document.getElementById("szolg1_leiras").textContent = t.szolg1_leiras;
-
   document.getElementById("szolg2_cim").textContent = t.szolg2_cim;
   document.getElementById("szolg2_leiras").textContent = t.szolg2_leiras;
-
   document.getElementById("szolg3_cim").textContent = t.szolg3_cim;
   document.getElementById("szolg3_leiras").textContent = t.szolg3_leiras;
 
-  // Portfolio
+  // Portfolio & Contact
   document.getElementById("munkaim_cim").textContent = t.munkaim_cim;
-
-  // Contact
   document.getElementById("kapcsolat_cim").textContent = t.kapcsolat_cim;
   document.getElementById("helyszin").textContent = t.helyszin;
 }
 
-
-// Betöltéskor inicializálás
 document.addEventListener("DOMContentLoaded", function () {
-  // Ellenőrizzük, hogy minden elem létezik a DOM-ban
-  console.log("DOM loaded, initializing language system");
-
-  // Opcionálisan: állítsd be az alapértelmezett nyelvet
   updateTexts();
 });

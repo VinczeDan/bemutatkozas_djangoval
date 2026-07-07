@@ -173,11 +173,11 @@ document.addEventListener("DOMContentLoaded", function () {
           scale: 1.05,
           duration: 0.3,
         });
-        gsap.to(munka.querySelector(".munka-cim")),
+        (gsap.to(munka.querySelector(".munka-cim")),
           {
-            color: "#ffffff",
+            color: "#f3821a",
             duration: 0.3,
-          };
+          });
       });
 
       munka.addEventListener("mouseleave", () => {

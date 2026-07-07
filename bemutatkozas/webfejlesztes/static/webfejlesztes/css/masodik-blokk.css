@@ -6,7 +6,7 @@
 
 .hero-banner {
   position: relative;
-  background-image: url('../images/narancskurva-pica.png');
+  background-image: url('../images/hero-bg.png');
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -49,5 +49,46 @@
   
   .cim {
     letter-spacing: 3px;
+  }
+}
+
+/* ... [A meglévő stílusok] */
+
+.hero-content {
+  max-width: 800px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta-button {
+  margin-top: 30px;
+  padding: 14px 30px;
+  background-color: var(--color-primary, #f3821a);
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(243, 130, 26, 0.3);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #000000;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  /* ... [A meglévő media queryk] */
+  .cta-button {
+    padding: 12px 24px;
+    font-size: 1rem;
   }
 }
