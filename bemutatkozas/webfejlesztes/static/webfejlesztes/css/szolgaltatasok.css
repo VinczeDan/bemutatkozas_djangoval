@@ -128,3 +128,50 @@
   }
 }
 
+/* ----------------------------------------------------
+   HULLÁMOS DESIGN (SHAPE DIVIDERS) STÍLUSOK
+---------------------------------------------------- */
+
+.elementor-shape-top,
+.flipped-shape {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 3; /* A sötét háttérréteg (z-index: 1) felett, de a tartalom alatt legyen */
+}
+
+.elementor-shape-top {
+  top: 0;
+}
+
+.flipped-shape {
+  bottom: 0;
+  transform: scaleY(-1); /* Megfordítja az alsó hullámot */
+}
+
+.elementor-shape-top svg,
+.flipped-shape svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 50px; /* A hullám magassága */
+}
+
+/* Az SVG alakzatok színe (illeszkedve az előző/következő szekció háttérszínéhez) */
+.elementor-shape-top svg path,
+.flipped-shape svg path {
+  fill: var(--color-white); /* Vagy amilyen színű a felette/alatta lévő szekció */
+}
+
+/* A belső padding igazítása a hullámok miatt, hogy ne lógjon rá a szövegre */
+.szolgaltatasok {
+  padding: 110px 20px;
+}
+
+@media (max-width: 650px) {
+  .szolgaltatasok {
+    padding: 90px 15px;
+  }
+}
