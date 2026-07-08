@@ -1,7 +1,3 @@
-html {
-  scroll-behavior: smooth;
-}
-
 :root {
     /* Primary Colors */
     --color-primary: #f3821a;        /* Orange from hover underline */

@@ -26,6 +26,44 @@ document.addEventListener("DOMContentLoaded", function () {
     // Regisztráljuk a ScrollTrigger plugint
     gsap.registerPlugin(ScrollTrigger);
 
+
+    // ----------------------------------------------------
+    // LURKÓ GÖRGETÉS (LENIS SMOOTH SCROLL) APURÍTÁSA
+    // ----------------------------------------------------
+    const lenis = new Lenis({
+      duration: 1.5, // Mennyi ideig tartson a csúszás (másodperc). Ha lassabbat akarsz, emeld 1.8-ra!
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Finom lecsillapodási görbe
+      direction: "vertical",
+      gestureDirection: "vertical",
+      smooth: true,
+      mouseMultiplier: 1, // Görgetés érzékenysége
+      smoothTouch: false, // Mobilon hagyjuk meg a gyári finom görgetést
+    });
+
+    // Összekötjük a Lenis-t a GSAP ScrollTriggerrel, hogy az animációk tűpontosak maradjanak
+    lenis.on("scroll", ScrollTrigger.update);
+
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+
+    gsap.ticker.lagSmoothing(0);
+
+    // Biztosítjuk, hogy a belső linkek és a CTA gomb is finoman görgessenek a Lenis-szel
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href");
+        const target = document.querySelector(targetId);
+        if (target) {
+          lenis.scrollTo(target, {
+            offset: -80, // Ide írd a headered magasságát pixelben, hogy ne takarja ki a címet!
+          });
+        }
+      });
+    });
+    // ----------------------------------------------------
+
     // ----------------------------
     // 1. Hero section animációk
     // ----------------------------
@@ -45,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
           duration: 0.8,
           ease: "back.out(1.2)",
         },
-        "-=0.4"
+        "-=0.4",
       )
       .from(
         ".motto1",
@@ -54,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
           opacity: 0,
           duration: 0.6,
         },
-        "-=0.6"
+        "-=0.6",
       )
       .from(
         ".motto2",
@@ -63,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
           opacity: 0,
           duration: 0.6,
         },
-        "-=0.6"
+        "-=0.6",
       );
 
     // ----------------------------
@@ -185,11 +223,11 @@ document.addEventListener("DOMContentLoaded", function () {
           scale: 1,
           duration: 0.3,
         });
-        gsap.to(munka.querySelector(".munka-cim")),
+        (gsap.to(munka.querySelector(".munka-cim")),
           {
             color: "",
             duration: 0.3,
-          };
+          });
       });
     });
 
@@ -245,7 +283,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // SVG hullámok animációja
     const wavePaths = document.querySelectorAll(
-      ".flipped-shape path, .elementor-shape-top path"
+      ".flipped-shape path, .elementor-shape-top path",
     );
 
     wavePaths.forEach((path, index) => {
