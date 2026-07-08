@@ -1,161 +1,129 @@
-/* Alapstílusok */
+/* Alapstílusok és háttér */
 .szolgaltatasok {
   font-family: "Arial", sans-serif;
   color: white;
   position: relative;
   overflow: hidden;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 80px 20px;
 }
 
-.szolgaltatas_cim {
-  text-align: center;
-  color: var(--color-primary);
-  font-size: 2.5em;
-  font-family: "Oswald";
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  position: relative;
-  z-index: 4;
-  background: transparent;
-}
-
-.szolgaltatas-csempek {
-  position: relative;
-  padding: 20px 0;
-}
-
-.szolgaltatas-csempek::after {
+/* Sötét, elegáns háttérkép réteg */
+.szolgaltatasok::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88)),
     url(../images/fekageci.jpg);
   background-size: cover;
   background-position: center;
   z-index: 1;
-  margin-top: -1px;
 }
 
-/* Common styles for service boxes */
-.weboldal-keszietes,
-.weboldal-szerkesztes,
-.modern-design {
+/* Főcím stílusa */
+.szolgaltatas_cim {
+  text-align: center;
+  color: var(--color-primary);
+  font-size: 2.8rem;
+  font-family: "Oswald";
+  text-transform: uppercase;
+  letter-spacing: 3px;
   position: relative;
-  transition: transform 0.3s ease;
-  width: 80%;
-  box-sizing: border-box;
   z-index: 4;
-  padding: 30px 40px;
-  font-family: "Michroma";
-  font-weight: bolder;
-  font-size: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
-/* Right-aligned boxes with icon on the right */
-.weboldal-keszietes,
-.modern-design {
-  margin-left: auto;
-  margin-right: 150px;
-  text-align: right;
-  border-left: none;
-  border-radius: 8px 0 0 8px;
+/* 3 oszlopos modern Grid konténer */
+.szolgaltatas-container {
+  position: relative;
+  z-index: 4;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 10px;
 }
 
-/* Left-aligned box with icon on the left */
-.weboldal-szerkesztes {
-  margin-right: auto;
-  margin-left: 150px;
-  text-align: left;
-  border-right: none;
-  border-radius: 0 8px 8px 0;
-}
-.elementor-shape-top {
-  transform: scaleY(-1);
-  height: 100px;
-  line-height: 0; /* Eltünteti a whitespace-t */
-  margin-bottom: 0px; /* Kis átfedés a háttérrel */
-}
-/* Icon styling */
-
-.weboldal-keszietes svg,
-.modern-design svg {
-  position: absolute;
-  right: -40px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 70px;
-  height: 70px;
-  fill: #f9a742; /* Yellow color for the icon */
+/* Egyedi szolgáltatás kártyák */
+.szolgaltatas-kartya {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(5px);
 }
 
-.weboldal-szerkesztes svg {
-  position: absolute;
-  left: -40px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 70px;
-  height: 70px;
-  fill: #f9a742; /* Yellow color for the icon */
+/* Hover effekt a kártyákra */
+.szolgaltatas-kartya:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--color-primary);
+  box-shadow: 0 15px 30px rgba(243, 130, 26, 0.15);
 }
-/* Existing styles remain the same until media queries */
 
+/* Ikonok formázása */
+.szolgaltatas-ikon {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.szolgaltatas-kartya:hover .szolgaltatas-ikon {
+  transform: scale(1.12);
+}
+
+/* Kártya címei */
+.szolgaltatas-kartya h3 {
+  font-family: "Oswald";
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+/* Kártya leírások */
+.szolgaltatas-kartya p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #cccccc;
+}
+
+/* ----------------------------------------------------
+   RESZPONSZÍV BEÁLLÍTÁSOK (MOBIL & TABLET)
+---------------------------------------------------- */
+
+/* Tableten 2 oszlopra vált */
 @media (max-width: 992px) {
-  .weboldal-keszietes,
-  .modern-design {
-    margin-right: 100px;
-  }
-
-  .weboldal-szerkesztes {
-    margin-left: 100px;
+  .szolgaltatas-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 768px) {
+/* Mobilon 1 oszlopos lesz (egymás alá ugranak) */
+@media (max-width: 650px) {
+  .szolgaltatasok {
+    padding: 60px 15px;
+  }
+  
   .szolgaltatas_cim {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    margin-bottom: 35px;
   }
 
-  .weboldal-keszietes,
-  .weboldal-szerkesztes,
-  .modern-design {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 25px 20px 25px 70px;
-    text-align: left;
+  .szolgaltatas-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
-
-  /* Adjust icon positioning */
-  .weboldal-keszietes svg,
-  .modern-design svg {
-    left: 10px;
-    right: auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .szolgaltatas_cim {
-    font-size: 1.5rem;
-  }
-
-  .weboldal-keszietes,
-  .weboldal-szerkesztes,
-  .modern-design {
-    width: 100%;
-    padding: 20px 15px 20px 60px;
-    font-size: 16px;
-  }
-
-  .weboldal-keszietes svg,
-  .weboldal-szerkesztes svg,
-  .modern-design svg {
-    width: 30px;
-    height: 30px;
-    left: 10px;
+  
+  .szolgaltatas-kartya {
+    padding: 30px 20px;
   }
 }
