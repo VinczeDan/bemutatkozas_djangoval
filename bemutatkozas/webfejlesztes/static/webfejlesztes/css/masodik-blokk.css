@@ -19,6 +19,7 @@
   color: white;
   text-align: center;
   padding: 20px;
+  overflow: hidden;
 }
 
 .hero-content {
@@ -66,6 +67,36 @@
   color: white;
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.flipped-shape {
+  position: absolute;
+  left: 0;
+  bottom: 0; /* Pontosan a hero aljára tapasztja */
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 3;
+  margin-bottom: -1px; /* Biztonsági átfedés az elcsúszások ellen */
+}
+
+.flipped-shape svg {
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 50px;
+}
+
+/* Az SVG színe legyen fixen fehér, hogy beleolvadjon a Rólam szekcióba */
+.flipped-shape svg path {
+  fill: #ffffff;
+}
+
+/* A Rólam szekció kapjon egy kis felső paddingot, hogy a hullám ne lógjon rá a címre */
+.rolam {
+  background-color: #ffffff;
+  padding-top: 60px;
+  position: relative;
+  z-index: 2;
 }
 
 @media (max-width: 768px) {
