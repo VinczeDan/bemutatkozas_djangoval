@@ -129,7 +129,7 @@
 }
 
 /* ----------------------------------------------------
-   HULLÁMOS DESIGN (SHAPE DIVIDERS) STÍLUSOK
+   HULLÁMOS DESIGN (SHAPE DIVIDERS) JAVÍTOTT STÍLUSOK
 ---------------------------------------------------- */
 
 .elementor-shape-top,
@@ -139,15 +139,17 @@
   width: 100%;
   overflow: hidden;
   line-height: 0;
-  z-index: 3; /* A sötét háttérréteg (z-index: 1) felett, de a tartalom alatt legyen */
+  z-index: 3; /* Biztosítja, hogy a háttérkép felett, de a szövegek alatt legyen */
 }
 
 .elementor-shape-top {
   top: 0;
+  margin-top: -1px; /* Eltünteti a tizedespixel finomságú felső fehér csíkot/keretet */
 }
 
 .flipped-shape {
   bottom: 0;
+  margin-bottom: -1px; /* Eltünteti az alsó nemkívánatos illeszkedési rést */
   transform: scaleY(-1); /* Megfordítja az alsó hullámot */
 }
 
@@ -157,17 +159,20 @@
   display: block;
   width: calc(100% + 1.3px);
   height: 50px; /* A hullám magassága */
+  transform: rotate(0deg); /* Fixálja a hardveres gyorsítást renderingkor */
 }
 
-/* Az SVG alakzatok színe (illeszkedve az előző/következő szekció háttérszínéhez) */
+/* Az SVG alakzatok színe igazodva a fogadó fehér szekciókhoz */
 .elementor-shape-top svg path,
 .flipped-shape svg path {
-  fill: var(--color-white); /* Vagy amilyen színű a felette/alatta lévő szekció */
+  fill: #ffffff; /* Explicit fehér szín a var(--color-white) helyett, ha az nem lenne definiálva */
 }
 
 /* A belső padding igazítása a hullámok miatt, hogy ne lógjon rá a szövegre */
 .szolgaltatasok {
+  position: relative;
   padding: 110px 20px;
+  background-color: #000000; /* Biztosítjuk a sötét alapot a belső maszkoláshoz */
 }
 
 @media (max-width: 650px) {
