@@ -124,17 +124,16 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 USE_TZ = True
 
-#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
-#EMAIL_HOST = 'smtp-relay.brevo.com'
-#EMAIL_PORT = 587
-#EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'daniel.vincze15@gmail.com'
+EMAIL_HOST_PASSWORD = local_settings.SMTP_KEY
 
-#EMAIL_HOST_USER = 'apikey'
-#EMAIL_HOST_PASSWORD = local_settings.BREVO_SMTP_KEY
-
-#DEFAULT_FROM_EMAIL = local_settings.DEFAULT_FROM_EMAIL
-#CONTACT_EMAIL = local_settings.CONTACT_EMAIL
+DEFAULT_FROM_EMAIL = local_settings.DEFAULT_FROM_EMAIL
+CONTACT_EMAIL = local_settings.CONTACT_EMAIL
 
 
 
