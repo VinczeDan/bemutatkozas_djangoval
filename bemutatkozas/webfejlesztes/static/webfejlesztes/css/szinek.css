@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
     /* Primary Colors */
     --color-primary: #f3821a;        /* Orange from hover underline */
@@ -14,10 +18,10 @@
     --shadow-text-strong: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Title text shadow */
     --shadow-box: 0 2px 10px rgba(0, 0, 0, 0.1);         /* Header box shadow */
     --shadow-box-strong: -5px 0 15px rgba(0, 0, 0, 0.1);  /* Mobile menu shadow */
-  }
+}
   
-  /* Selection styles */
-  ::selection {
-    background-color: var(--color-black);
-    color: whitesmoke;
-  }
+/* Selection styles */
+::selection {
+  background-color: var(--color-black);
+  color: whitesmoke;
+}

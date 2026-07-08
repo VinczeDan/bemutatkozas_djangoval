@@ -24,6 +24,9 @@
 .hero-content {
   max-width: 800px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .cim {
@@ -40,28 +43,7 @@
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 768px) {
-  .hero-banner {
-    min-height: 80vh;
-    height: auto;
-    padding: 40px 20px;
-  }
-  
-  .cim {
-    letter-spacing: 3px;
-  }
-}
-
-/* ... [A meglévő stílusok] */
-
-.hero-content {
-  max-width: 800px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
+/* Call to Action Gomb */
 .cta-button {
   margin-top: 30px;
   padding: 14px 30px;
@@ -76,6 +58,7 @@
   border-radius: 5px;
   box-shadow: 0 4px 15px rgba(243, 130, 26, 0.3);
   transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .cta-button:hover {
@@ -86,7 +69,16 @@
 }
 
 @media (max-width: 768px) {
-  /* ... [A meglévő media queryk] */
+  .hero-banner {
+    min-height: 80vh;
+    height: auto;
+    padding: 40px 20px;
+  }
+  
+  .cim {
+    letter-spacing: 3px;
+  }
+
   .cta-button {
     padding: 12px 24px;
     font-size: 1rem;
